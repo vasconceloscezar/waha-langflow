@@ -10,31 +10,43 @@ You can quickly spin up a WAHA instance using Docker.
 docker run -it -d --rm -p 3000:3000/tcp --name waha devlikeapro/waha
 ```
 
-Here are a few components we have so far. 
-1. WAHA - Get Chat Messages:
-   ![Get Chat Messages](./images/get_chat_messages.png)
+## Here are a few components we have so far. 
+
+
+
+### 1. WAHA - Get Chat Messages:
    This component retrieves messages from a specific chat in the WAHA API. It allows you to fetch a certain number of messages, optionally download media, and filter messages based on the sender.
 
-2. WAHA - Get Chats:
-   ![Get Chats](./images/get_chats.png)
-   This component retrieves a list of chats from the WAHA API. It allows you to specify the number of chats to retrieve and provides pagination support through an offset parameter.
+![Get Chat Messages](./images/waha_get_chat_messages.png)
 
-3. WAHA - Get All Contacts:
-   ![Get All Contacts](./images/get_all_contacts.png)
+
+
+### 2. WAHA - Get Chats:
+   This component retrieves a list of chats from the WAHA API. It allows you to specify the number of chats to retrieve and provides pagination support through an offset parameter.
+   
+![Get Chats](./images/waha_get_chats.png)
+
+
+### 3. WAHA - Get All Contacts:
    This component fetches all contacts from the WAHA API. It provides a comprehensive list of all contacts associated with the WhatsApp account.
 
-4. WAHA - React to Message:
-   ![React to Message](./images/react_to_message.png)
+![Get All Contacts](./images/waha_get_all_contacts.png)
+
+### 4. WAHA - React to Message:
    This component allows you to react to a specific message with an emoji using the WAHA API. It takes the message ID and the emoji reaction as inputs.
 
-5. WAHA - Send Text Message:
-   ![Send Text Message](./images/send_text_message.png)
+![React to Message](./images/waha_react_to_message.png)
+
+
+### 5. WAHA - Send Text Message:
    This component sends a text message to a specific chat using the WAHA API. It allows you to specify the chat ID, the message text, and optionally, a message ID to reply to.
 
-6. WAHA Message Parser:
-   ![Message Parser](./images/message_parser.png)
-   While not explicitly a WAHA API component, this custom component parses the incoming WhatsApp message data from the WAHA API. It extracts various fields like message ID, timestamp, sender, body, etc., making it easier to work with the message data in the flow.
+![Send Text Message](./images/waha_send_text_message.png)
 
+### 6. WAHA Message Payload:
+   This custom component parses the incoming WhatsApp message data from the WAHA API. It extracts various fields like message ID, timestamp, sender, body, etc., making it easier to work with the message data in the flow.
+
+![Message Payload](./images/waha_message_payload.png)
 
 
 Here's a simple flow that I was testing with a conditional router to reply to a specific message from a specific contact. 
