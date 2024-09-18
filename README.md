@@ -12,34 +12,34 @@ docker run -it -d --rm -p 3000:3000/tcp --name waha devlikeapro/waha
 
 Here are a few components we have so far. 
 1. WAHA - Get Chat Messages:
-   ![Get Chat Messages](./assets/get_chat_messages.png)
+   ![Get Chat Messages](./images/get_chat_messages.png)
    This component retrieves messages from a specific chat in the WAHA API. It allows you to fetch a certain number of messages, optionally download media, and filter messages based on the sender.
 
 2. WAHA - Get Chats:
-   ![Get Chats](./assets/get_chats.png)
+   ![Get Chats](./images/get_chats.png)
    This component retrieves a list of chats from the WAHA API. It allows you to specify the number of chats to retrieve and provides pagination support through an offset parameter.
 
 3. WAHA - Get All Contacts:
-   ![Get All Contacts](./assets/get_all_contacts.png)
+   ![Get All Contacts](./images/get_all_contacts.png)
    This component fetches all contacts from the WAHA API. It provides a comprehensive list of all contacts associated with the WhatsApp account.
 
 4. WAHA - React to Message:
-   ![React to Message](./assets/react_to_message.png)
+   ![React to Message](./images/react_to_message.png)
    This component allows you to react to a specific message with an emoji using the WAHA API. It takes the message ID and the emoji reaction as inputs.
 
 5. WAHA - Send Text Message:
-   ![Send Text Message](./assets/send_text_message.png)
+   ![Send Text Message](./images/send_text_message.png)
    This component sends a text message to a specific chat using the WAHA API. It allows you to specify the chat ID, the message text, and optionally, a message ID to reply to.
 
 6. WAHA Message Parser:
-   ![Message Parser](./assets/message_parser.png)
+   ![Message Parser](./images/message_parser.png)
    While not explicitly a WAHA API component, this custom component parses the incoming WhatsApp message data from the WAHA API. It extracts various fields like message ID, timestamp, sender, body, etc., making it easier to work with the message data in the flow.
 
 
 
 Here's a simple flow that I was testing with a conditional router to reply to a specific message from a specific contact. 
 
-![Flow](./assets/waha_flow_conditional_reply.png)
+![Flow](./images/waha_flow_conditional_reply.png)
 
 1. Webhook Input:
    The flow starts with a Webhook component that receives incoming data, likely from the WAHA API when a new message arrives.
